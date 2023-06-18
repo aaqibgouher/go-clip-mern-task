@@ -20,6 +20,6 @@ Step 3. Start your application by running **'npm run dev'**. It will start at th
 
 // **Note: Once done, start calling the end points.**
 
-// **Postman colletion: [Postman Collection](./sploot-api.postman_collection.json)**
+// **Postman colletion: [Postman Collection](./go-clip.postman_collection.json)**
 
 We are good to go now!
