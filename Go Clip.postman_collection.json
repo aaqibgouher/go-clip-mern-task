@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "84d3d7d4-57f2-4952-8d5d-c6ef2427e934",
+		"name": "Go Clip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17953118"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"fullName\": \"text\", \n    \"companyName\": \"test company\", \n    \"mobileNo\": \"9122264667\", \n    \"workEmail\": \"test@gmail.com\", \n    \"role\": \"founder\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Get company details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW55SWQiOiI2NDdjOGQ4Y2Q3MzQxYzQyOTc0OWQzYzciLCJpYXQiOjE2ODU4ODQzMzQsImV4cCI6MTY4NTk3MDczNH0.z91ivWkzpXBf63ZEBTWBCv4e0LHJRzkTkFwBPvZ8FRI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/dashboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Candidate",
+			"item": [
+				{
+					"name": "Add candidate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW55SWQiOiI2NDdmMzE5NTM5ZjFiMTRmNmVlMjMwNmIiLCJpYXQiOjE2ODYwNTc0MTMsImV4cCI6MTY4NjE0MzgxM30.nSVLKCEjpaE8veKZpibjAjOauPVR3jCdSWnGt3_W474",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"basicDetails\": {\n        \"jobRole\": \"SDE\",\n        \"name\": \"sneha\",\n        \"gender\": \"male\",\n        \"nationality\": \"india\",\n        \"mobile\": \"778112345\",\n        \"email\": \"sneha@gmail.com\",\n        \"linkedIn\": \"123\",\n        \"maritalStatus\": \"single\",\n        \"hobbies\": [],\n        \"preferredLocations\": [],\n        \"skills\": []\n    },\n    \"educationDetails\": [\n        {\n            \"type\": \"post graduation\",\n            \"college\": \"TOCS\",\n            \"course\": \"Msc\",\n            \"city\": \"bangalore\",\n            \"passingYear\": \"2022\",\n            \"status\": true\n        },\n        {\n            \"type\": \"graduation\",\n            \"college\": \"TOCS\",\n            \"course\": \"Bsc\",\n            \"city\": \"bangalore\",\n            \"passingYear\": \"2019\",\n            \"status\": true\n        },\n        {\n            \"type\": \"high school\",\n            \"college\": \"TOCS\",\n            \"course\": \"12th\",\n            \"city\": \"bangalore\",\n            \"passingYear\": \"2017\",\n            \"status\": true\n        }\n    ],\n    \"certifications\": [\n        {\n            \"name\": \"c++\",\n            \"organization\": \"TOCS\",\n            \"date\": \"\"\n        },\n        {\n            \"name\": \"js\",\n            \"organization\": \"TOCS\",\n            \"date\": \"\"\n        }\n    ],\n    \"jobDetails\": [\n        {\"company\": \"First company\", \"role\": \"SDE\", \"duration\": \"2yr\"}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/candidate/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"candidate",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get candidates",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW55SWQiOiI2NDdmMzE5NTM5ZjFiMTRmNmVlMjMwNmIiLCJpYXQiOjE2ODYwNTc0MTMsImV4cCI6MTY4NjE0MzgxM30.nSVLKCEjpaE8veKZpibjAjOauPVR3jCdSWnGt3_W474",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/candidate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"candidate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
