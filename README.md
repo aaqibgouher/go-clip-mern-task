@@ -23,3 +23,22 @@ Step 3. Start your application by running **'npm run dev'**. It will start at th
 // **Postman colletion: [Postman Collection](./go-clip.postman_collection.json)**
 
 We are good to go now!
+
+### Snapshots
+* Dashboard Page
+![Alt text](./snapshots/dashboard.png)
+
+* Login Page
+![Alt text](./snapshots//login.png)
+
+* Register Page
+![Alt text](./snapshots//register.png)
+
+* Reset Password Page
+![Alt text](./snapshots//reset-password.png)
+
+* Candidates List Page
+![Alt text](./snapshots//candiate-list.png)
+
+* Add Candidate Page
+![Alt text](./snapshots//add-candidate.png)
